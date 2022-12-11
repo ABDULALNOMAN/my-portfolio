@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
+import React, { useRef } from 'react';
 
 const Contact = () => {
+    const serviceId = import.meta.env.VITE_SERVICE_ID
+    const templateId = import.meta.env.VITE_TEMPLATE_ID
+    const publicId = import.meta.env.VITE_PUBLIC_KEY
     const form = useRef()
     const submitEmail = event => {
         event.preventDefault()
-        emailjs.sendForm(import.meta.env.SERVICE_ID, import.meta.env.TEMPLATE_ID, form.current, import.meta.env.PUBLIC_KEY)
+        emailjs.sendForm(serviceId, templateId, form.current,publicId)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
