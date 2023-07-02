@@ -1,17 +1,18 @@
 import React from 'react';
-import myImg from '../../assets/my-bg.png'
+// import myImg from '../../assets/my-bg.png'
 import myResume from '../../assets/myResume.pdf';
 import { TypeAnimation } from 'react-type-animation';
+import myImg from '../../assets/20221222_112301-removebg-preview.png'
 
 const Banner = () => {
     const ref = React.createRef();
     return (
-        <div id='banner' className='font-serif mt-20 lg:mt-0 lg:mb-0 mb-8'>
-            <div className='container mx-auto lg:h-[90vh] flex flex-row justify-evenly items-center '>
+        <div id='banner' className='font-serif bg-banner-image bg-no-repeat text-white'>
+            <div className='container mx-auto h-[90vh] flex flex-row justify-center items-center '>
                 <div className='md:w-1/2 w-0 md:flex items-center hidden'>
                     <img  className='w-full h-full p-10 ' src={myImg} alt="" />
                 </div>
-                <div className='md:w-1/2 md:mx-0 mx-10'>
+                <div className='md:mx-0 mx-10'>
                     <h4 className='text-xl'>Hello world</h4>
                     <h1 className='text-5xl font-bold mb-4'>i'm abdul al n<span className='animate-pulse'>o</span>man</h1>
                     <h3 className='text-xl capitalize'>a 

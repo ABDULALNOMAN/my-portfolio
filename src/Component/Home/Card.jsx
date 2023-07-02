@@ -23,11 +23,11 @@ const Card = () => {
         }
     ]
     return (
-        <div id='card' className='container mx-auto'>
+        <div id='card' className='container mx-auto overflow-visible'>
             <div className='text-center mb-8'>
                 <h1 className='text-4xl font-serif underline font-semibold'>project</h1>
             </div>
-            <div className='grid md:grid-cols-2  lg:grid-cols-3 gap-3 my-4 md:mx-0 mx-10'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-3 my-4 md:mx-0 mx-10'>
                 {
                     items.map(item=><Carditem key={item.index} item={item}></Carditem>)
                 }

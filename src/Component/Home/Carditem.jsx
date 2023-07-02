@@ -11,7 +11,7 @@ const Carditem = ({ item }) => {
     return (
         <div className="w-full bg-slate-300 shadow-lg relative shadow-slate-600">
             <div className='p-3'>
-                <figure><img data-aos="zoom-in" className='rounded-t-xl' src={img} alt="Shoes" /></figure>
+                <figure><img data-aos="zoom-in" className='rounded-t-xl ' src={img} alt="Shoes" /></figure>
                 <div className="mt-2 lg:h-52 md:h-48 h-40">
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
