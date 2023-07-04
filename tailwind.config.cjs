@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "banner-image":"url('/src/assets/Shiny Overlay (1).svg')"
+        "banner-image":"url('/src/assets/banner/IMG-20230523-WA0012.jpg')"
       }
     },
   },

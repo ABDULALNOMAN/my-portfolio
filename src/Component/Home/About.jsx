@@ -1,28 +1,60 @@
 import React from 'react';
-import about from '../../assets/undraw_profile_re_4a55.svg'
 
 const About = () => {
     return (
-        <div id='about' className='my-12 bg-slate-300 py-10 shadow-lg shadow-slate-600'>
-            <div className='text-center mb-8'>
-                <h1 className='text-4xl underline font-serif font-semibold'>About me</h1>
+        <div id='about' className='my-12 py-10 z-10'>
+            <div className='text-center mb-4'>
+                <h1 className='text-4xl text-blue-700'>About me</h1>
             </div>
-            <div className='grid grid-cols-3 gap-8 h-full  '>
-                <div className='md:block hidden col-span-1'>
-                    <img src={about} alt="" />
-                </div>
-                <div className='md:col-span-2 col-span-3 md:mx-0 mx-4'>
-                    <p className='text-lg font-serif'>Hello! Abdul Al Noman is a self-motivated and passionate web developer. I have been learning web development for 1.5 years. I learned JavaScript, React js, Node js, MongoDB and Express js during this time. I am constantly upgrading my skills to make an impact in web development</p>
-                    <p className='border-b-4 border-black my-4'></p>
-                    <div className='grid md:grid-cols-2 grid-cols-1 md:gap-6'>
-                        <div>
-                            <p className='font-serif'><span className='text-lg text-cyan-900'>Name: </span>Abdul al noman</p>
-                            <p className='font-serif'><span className='text-lg text-cyan-900'>Age: </span>21 Years</p>
+            <div className='flex gap-2 justify-center'>
+                <span className='border border-x-0 border-b-0 w-10'></span>
+                <span className='border border-x-0 border-b-0 w-10 border-blue-700'></span>
+                <span className='border border-x-0 border-b-0 w-10'></span>
+            </div>
+            <div className='md:col-span-2 col-span-3 md:mx-0 mx-4'>
+                <p className='text-lg font-serif lg:mx-40  md:mx-20 mx-6 text-center my-10'>Hello! Abdul Al Noman is a self-motivated and passionate web developer. I have been learning web development for 1.5 years. I learned JavaScript, React js, Node js, MongoDB and Express js during this time. I am constantly upgrading my skills to make an impact in web development</p>
+                <div className='grid grid-cols-1 md:grid-cols-2 mx-16 gap-x-16 gap-y-6'>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>html</p>
+                            <p>80%</p>
                         </div>
-                        <div>
-                            <p className='font-serif'><span className='text-lg text-cyan-900'>Email: </span>nomanmd1st2001@gmail.com</p>
-                            <p className='font-serif'><span className='text-lg text-cyan-900'>From: </span>Chittagong, bangladesh</p>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
+                    </div>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>css</p>
+                            <p>80%</p>
                         </div>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
+                    </div>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>JavaScript</p>
+                            <p>80%</p>
+                        </div>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
+                    </div>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>react</p>
+                            <p>80%</p>
+                        </div>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
+                    </div>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>Express</p>
+                            <p>80%</p>
+                        </div>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
+                    </div>
+                    <div>
+                        <div className='flex justify-between w-10/12 items-center'>
+                            <p>tailwind</p>
+                            <p>80%</p>
+                        </div>
+                        <progress className="progress progress-primary w-full" value="80" max="100"></progress>
                     </div>
                 </div>
             </div>

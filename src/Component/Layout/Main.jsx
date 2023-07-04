@@ -9,13 +9,13 @@ const Main = () => {
     const {change} = useContext(callContext)
     return (
         <div className='relative'>
-            <Navbar></Navbar>
             <div className='flex lg:h-screen min-h-screen'>
                 <div  className={`${change?'translate-x-0 ease-out'
-                :'-translate-x-full ease-in'} lg:w-80 w-64 lg:translate-x-0 lg:static fixed transition-transform duration-300 bg-[#000000] z-10 lg:h-full min-h-screen`}>
+                :'-translate-x-full ease-in'} w-64 lg:-translate-x-full fixed transition-transform duration-300 bg-[#000000] z-20 min-h-screen`}>
                     <Slide></Slide>
                 </div>
                 <div className={`w-full lg:overflow-y-scroll`}>
+                    <Navbar></Navbar>
                     <Outlet></Outlet>
                     <Footer></Footer>
                 </div>

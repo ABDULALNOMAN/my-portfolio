@@ -1,5 +1,5 @@
 import React from 'react';
-import  logo from '../../assets/360_F_406926005_dGy1iIhhadwEGOTFJjw2q1ir7lrYjg3C.jpg'
+import  logo from '../../assets/logo/abdul-al-noman-low-resolution-logo-color-on-transparent-background.png'
 
 const Footer = () => {
     return (

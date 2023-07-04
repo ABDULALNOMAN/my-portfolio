@@ -6,7 +6,7 @@ import { BsFacebook, BsGithub, BsLinkedin} from 'react-icons/bs';
 const Slide = () => {
     return (
         <div className='h-full w-full'>
-            <div className='flex flex-col lg:gap-0 gap-6 justify-around lg:pt:0 pt-3 h-full'>
+            <div className='flex flex-col lg:gap-0 gap-6 justify-around lg:pt:0 pt-3 h-screen'>
                 <div className=''>
                     <img src={img2} className='lg:w-8/12 w-6/12 rounded-2xl mx-auto' alt=""/>
                 </div>

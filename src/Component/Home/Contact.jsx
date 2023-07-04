@@ -16,9 +16,8 @@ const Contact = () => {
       });
   };
     return (
-        <div id='contact' className='lg:w-7/12 md:w-9/12 mx-auto my-10'>
-            <h2 className='text-4xl capitalize font-serif text-center mb-6 font-semibold underline'>contact</h2>
-            <form ref={form} onSubmit={submitEmail} className='border-4 rounded-2xl border-double p-5 bg-slate-300 md:mx-0 mx-10' action="">
+        <div id='contact' className='w-full mx-auto h-full'>
+            <form ref={form} onSubmit={submitEmail} className='rounded-2xl h-full border-double p-5 card-gradient md:mx-0 ' action="">
                 <div className='grid grid-cols-2 gap-4 mb-4'>
                     <div>
                         <label htmlFor="Name">Name</label>
@@ -34,7 +33,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <textarea name='message' className="textarea textarea-bordered w-full h-44 text-slate-300" placeholder="text"></textarea>
-                <button className='btn btn-info' type="submit">send message</button>
+                <button className='btn btn-info mt-3' type="submit">send message</button>
             </form>
         </div>
     );

@@ -5,19 +5,24 @@
   .clip-style{
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   }
+  .banner-gradient{
+    background-image: linear-gradient(to right top, #000000, #030102, #060306, #070509, #08070d, #0a0a10, #0c0d13, #0d1016, #111419, #14171c, #161b20, #191e23); 
+   }
+  .card-gradient{
+    background-image: linear-gradient(to bottom, #1b2f46, #1a2a3b, #192531, #181f27, #171a1d);  }
 }
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 24px;
   font-weight: 400;
   position: relative;
-
   color-scheme: light dark;
-  color: #242424;
-  background-color:rgb(2, 2, 2);
+  color: #fffefe;
+  background-color:#171A1D;
 
   font-synthesis: none;
+  text-transform: capitalize;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
