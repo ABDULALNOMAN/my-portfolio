@@ -1,20 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer utilities {
-  .clip-style{
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-  }
-  .banner-gradient{
-    background-image: linear-gradient(to right top, #000000, #030102, #060306, #070509, #08070d, #0a0a10, #0c0d13, #0d1016, #111419, #14171c, #161b20, #191e23); 
-   }
-  .card-gradient{
-    background-image: linear-gradient(to bottom, #1b2f46, #1a2a3b, #192531, #181f27, #171a1d);  }
-}
+
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  /* font-size: 16px; */
-  line-height: 24px;
+  font-family: 'Roboto', sans-serif;  line-height: 24px;
   font-weight: 400;
   position: relative;
   color-scheme: light dark;
@@ -28,3 +20,48 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+  .clip-style{
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  }
+  .card-gradient{
+    background-image: linear-gradient(to bottom, #1b2f46, #1a2a3b, #192531, #181f27, #171a1d); 
+    }
+  .blue__gradient {
+    background-image: linear-gradient(to left top, #0c3644, #103843, #143a43, #193b42, #1d3d42, #1c3b40, #1a383d, #19363b, #122f36, #0b2831, #05222c, #011b27);    filter: blur(123px);
+    filter: blur(120px);
+  }
+  .hero-gradient {
+    background-image: linear-gradient(to left top, #0a7dc6, #0078b4, #0072a0, #006b8d, #00647a, #005b6d, #005160, #004854, #003c49, #01313e, #012633, #011b27);
+    filter: blur(400px);
+  }
+  .btn-primary{
+    background: linear-gradient(to right, #1f5864, #1a5d6e, #166278, #146783, #166b8e, #13719b, #1378a8, #177eb5, #0e88c7, #0492d9, #009bec, #00a5ff);
+    border: none;
+  }
+ @keyframes primary {
+   20%{
+      width: full;
+   }
+   40%{
+    width: 130px;
+   }
+   60%{
+    width: 150px;
+   }
+   80%{
+    width: 170px;
+   }
+   100%{
+    width: 180px;
+   }
+ }
+ .primary-animation{
+  animation: primary;
+  animation-duration: 2s;
+  animation-delay: 2ms;
+  animation-direction:alternate ;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+ }
+   

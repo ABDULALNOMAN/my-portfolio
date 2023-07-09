@@ -22,33 +22,27 @@ const Card = () => {
     const items =[
         {
             "index":1,
-            "img":"https://i.ibb.co/kQzP12K/Screenshot-40.png",
+            "img":"https://i.ibb.co/6mB0ZB8/Screenshot-2022-12-12-000515.png",
             "name": "gsmarea",
             "description":"gsm area is a site for selling second-hand mobiles. It can include users and sellers. The seller can sell his product. Users can review products or buy products"
         },
         {
             "index":2,
-            "img":"https://i.ibb.co/hdCPF2L/Screenshot-41.png",
+            "img":"https://i.ibb.co/8dFFDcj/Screenshot-2022-12-12-001037.png",
             "name": "wild photography",
             "description":"Wild Photography Site is a personal site for selling wild photos. Users can view products and everything else when they are logged in"
         },
         {
             "index":3,
             "name":"learning site",
-            "img":"https://i.ibb.co/VB8ydFW/Screenshot-42.png",
-            "description":"Learning site programming learning site. A user can select his/her preferred programming after logging in. Users can download any programming section if they like it"
-        },
-        {
-            "index":4,
-            "name":"learning site",
-            "img":"https://i.ibb.co/VB8ydFW/Screenshot-42.png",
+            "img":"https://i.ibb.co/1nLs0kx/Screenshot-2022-12-11-115818.png",
             "description":"Learning site programming learning site. A user can select his/her preferred programming after logging in. Users can download any programming section if they like it"
         }
     ]
     return (
         <div id='card' className=' '>
             <div>
-                <h3 className='text-center text-4xl text-blue-700'>project</h3>  
+                <h3 className='text-center text-4xl text-blue-700 font-bold'>project</h3>  
                 <div className='flex gap-2 justify-center mt-4'>
                     <span className='border border-x-0 border-b-0 w-10'></span>
                     <span className='border border-x-0 border-b-0 w-10 border-blue-700'></span>
@@ -74,7 +68,7 @@ const Card = () => {
                 }}
                 modules={[Pagination]}
             >
-                <div className=' text-base py-16 '>
+                <div className='py-16'>
                     {items.map((item)=>(
                         <SwiperSlide key={item.index}>
                             <div className='card-gradient md:h-[400px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>

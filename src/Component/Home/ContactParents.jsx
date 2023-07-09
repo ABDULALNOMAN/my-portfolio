@@ -6,7 +6,7 @@ const ContactParents = () => {
   return (
     <div className='lg:mx-14 md:mx-7 mx-4 my-14'>
         <div className='text-center'>
-            <h3 className='text-4xl text-blue-700'>contact</h3>
+            <h3 className='text-4xl text-blue-700 font-bold'>contact</h3>
             <div className='flex gap-2 justify-center mt-4'>
                 <span className='border border-x-0 border-b-0 w-10'></span>
                 <span className='border border-x-0 border-b-0 w-10 border-blue-700'></span>

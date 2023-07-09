@@ -5,6 +5,7 @@ import Banner from './Banner';
 import Card from './Card';
 import Advice from './Advice';
 import ContactParents from './ContactParents';
+import Blog from './Blog';
 
 const Home = () => {
     const { change } = useContext(callContext)
@@ -15,6 +16,7 @@ const Home = () => {
             <Card></Card> 
             <Advice></Advice>
             <ContactParents></ContactParents>
+            <Blog></Blog>
         </div>
     );
 };
