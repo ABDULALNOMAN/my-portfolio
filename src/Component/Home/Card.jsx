@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// import '../../../styles/styles.css';
-
 import { Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import {useQuery} from '@tanstack/react-query'
 
 const Card = () => {
     const [widthNum , setWidthNum] = useState(1)
@@ -19,26 +15,15 @@ const Card = () => {
         else{return setWidthNum(3)}
     }
     setInterval(widthFunc, 1000)
-    const items =[
-        {
-            "index":1,
-            "img":"https://i.ibb.co/6mB0ZB8/Screenshot-2022-12-12-000515.png",
-            "name": "gsmarea",
-            "description":"gsm area is a site for selling second-hand mobiles. It can include users and sellers. The seller can sell his product. Users can review products or buy products"
-        },
-        {
-            "index":2,
-            "img":"https://i.ibb.co/8dFFDcj/Screenshot-2022-12-12-001037.png",
-            "name": "wild photography",
-            "description":"Wild Photography Site is a personal site for selling wild photos. Users can view products and everything else when they are logged in"
-        },
-        {
-            "index":3,
-            "name":"learning site",
-            "img":"https://i.ibb.co/1nLs0kx/Screenshot-2022-12-11-115818.png",
-            "description":"Learning site programming learning site. A user can select his/her preferred programming after logging in. Users can download any programming section if they like it"
+
+    const {isLoading,error, data:items=[]} = useQuery({
+        queryKey:[],
+        queryFn:async()=>{
+            const res = await fetch("http://localhost:5000/projectdata")
+            const data = res.json()
+            return data
         }
-    ]
+    })
     return (
         <div id='card' className=' '>
             <div>
@@ -48,7 +33,7 @@ const Card = () => {
                     <span className='border border-x-0 border-b-0 w-10 border-blue-700'></span>
                     <span className='border border-x-0 border-b-0 w-10'></span>
                 </div>
-                <div className='my-8 text-center mx-40'>
+                <div className='my-8 text-center w-11/12 mx-auto'>
                     <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus dolorum libero quidem illum voluptatem reiciendis distinctio quia architecto quos. </h3>
                 </div>
             </div>
@@ -69,21 +54,22 @@ const Card = () => {
                 modules={[Pagination]}
             >
                 <div className='py-16'>
-                    {items.map((item)=>(
-                        <SwiperSlide key={item.index}>
+                    {isLoading && <p>loading...</p>}
+                    {items?.length&& items?.map((item)=>(
+                        <SwiperSlide key={item._id}>
                             <div className='card-gradient md:h-[400px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>
                                 <div className=''>
-                                    <img className='w-full h-full rounded-lg' src={item.img} alt="" />
+                                    <img className='w-full h-full rounded-lg' src={item?.img} alt="" />
                                 </div>
-                                <h3 className='font-bold text-xl'>{item.name}</h3>
-                                <p className='text-sm'>{item.description}</p>
+                                <h3 className='font-bold text-xl'>{item?.name}</h3>
+                                <p className='text-sm'>{item?.description}</p>
                                 <div className='flex items-center justify-start gap-x-4'>
                                     <button><a className='btn btn-primary btn-sm' href="" target='_blank'>live</a></button>
-                                    <button><Link className='btn btn-info btn-sm' to={`/products/${item.index}`}>click</Link></button>
+                                    <button><Link className='btn btn-info btn-sm' to={`/products/${item?._id}`}>click</Link></button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                    ))}
+                    )) }
                 </div>
             </Swiper>
         </div>

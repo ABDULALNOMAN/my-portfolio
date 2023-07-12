@@ -16,7 +16,7 @@ const Products = () => {
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-3 px-3 mx-auto'>
                 {
-                    images.map((item,id )=> <img className='w-full h-48' key={id} src={item.img} alt="" />)
+                    images?.map((item,id )=> <img className='w-full h-48' key={id} src={item.img} alt="" />)
                 }
             </div>
             <div className='lg:w-6/12 md:w-8/12 flex flex-row justify-around my-8'>
@@ -30,7 +30,7 @@ const Products = () => {
                     <div className='ml-16'>
                         <ul className='list-disc'>
                             {
-                                Features.map((data, id) =><li className='text-lg font-serif' key={id}>{data.FeatureData}</li>)
+                                Features?.map((data, id) =><li className='text-lg font-serif' key={id}>{data.FeatureData}</li>)
                             }
                         </ul>
                     </div>
@@ -39,8 +39,8 @@ const Products = () => {
                     <h1 className='text-3xl underline font-serif font-semibold capitalize'>Techonology</h1>
                     <div className='ml-16'>
                         {
-                            Techonology.map((item, id) => <ul className='list-disc' key={id}>
-                                <li className='text-lg font-serif'>{item.Tech}</li>
+                            Techonology?.map((item, id) => <ul className='list-disc' key={id}>
+                                <li className='text-lg font-serif'>{item?.Tech}</li>
                             </ul>)
                         }
                     </div>

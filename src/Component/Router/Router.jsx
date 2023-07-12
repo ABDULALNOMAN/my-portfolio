@@ -17,12 +17,14 @@ const router = createBrowserRouter([
             {
                 path:'/products/:id',
                 element: <Products></Products>,
-                loader: ({ params }) => {
-                    const data = fetch(`https://my-protfolio-server-eight.vercel.app/products/${params.id}`)
-                    return data
+                loader: async({ params }) => {
+                    const res = await fetch(`http://localhost:5000/products/${params?.id}`)
+                    return await res.json()
                 }
             }
         ])
     }
 ])
 export default router
+
+// https://my-protfolio-server-eight.vercel.app

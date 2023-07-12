@@ -2,19 +2,20 @@ import React from 'react';
 import  logo from '../../assets/logo/abdul-al-noman-low-resolution-logo-color-on-transparent-background.png'
 import { FaFacebook, FaLinkedin, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
+import { BsGithub } from 'react-icons/bs';
 
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer card-gradient p-10 text-white">
+            <footer id='footer' className="footer card-gradient p-10 text-white">
                 <div>
                     <img className='w-32' src={logo} alt="" />
                     <p>Transforming Ideas into Digital Reality!</p>
                     <div className='flex justify-start items-center gap-4'>
-                        <FaFacebook className='text-blue-700 text-3xl'></FaFacebook>
-                        <FaLinkedin className='text-blue-700 text-3xl'></FaLinkedin>
-                        <FaWhatsapp className='text-green-700 text-3xl'></FaWhatsapp>
+                        <a href="https://www.facebook.com/profile.php?id=100022732852808"><FaFacebook className='text-blue-700 text-3xl'></FaFacebook></a>
+                        <a href="https://www.linkedin.com/in/abdul-al-noman-187751257/"><FaLinkedin className='text-blue-700 text-3xl'></FaLinkedin></a>
+                        <a href="https://github.com/ABDULALNOMAN?tab=repositories"><BsGithub className='text-black text-3xl'></BsGithub></a>
                     </div>
                 </div> 
                 <div>

@@ -11,7 +11,7 @@ const Main = () => {
         <div className='relative'>
             <div className='flex lg:h-screen min-h-screen'>
                 <div  className={`${change?'translate-x-0 ease-out'
-                :'-translate-x-full ease-in'} w-64 lg:-translate-x-full fixed transition-transform duration-300 bg-[#000000] z-20 min-h-screen`}>
+                :'-translate-x-full ease-in'} w-64 lg:-translate-x-full fixed transition-transform duration-300 bg-[#000000] z-50 min-h-screen`}>
                     <Slide></Slide>
                 </div>
                 <div className={`w-full lg:overflow-y-scroll`}>
