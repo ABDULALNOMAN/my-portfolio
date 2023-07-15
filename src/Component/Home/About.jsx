@@ -1,64 +1,16 @@
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import React from 'react';
 
 const About = () => {
-    const datas = [
-        {
-          "index": 0,
-          "picture": "/src/assets/about/js.png",
-          "name": "javaScript",
-        },
-        {
-          "index": 1,
-          "picture": "/src/assets/about/react.png",
-          "name": "React",
-        },
-        {
-          "index": 2,
-          "picture": "/src/assets/about/mongoDB.png",
-          "name": "mongoDB",
-        },
-        {
-          "index": 3,
-          "picture": "/src/assets/about/express.png",
-          "name": "Express",
-        },
-        {
-          "index": 4,
-          "picture": "/src/assets/about/tailwindcss.png",
-          "name": "Tailwind CSS",
-        },
-        {
-          "index": 5,
-          "picture": "/src/assets/about/bootstrap.png",
-          "name": "Bootstrap",
-        },
-        {
-          "index": 6,
-          "picture": "/src/assets/about/html-5.png",
-          "name": "html",
-        },
-        {
-          "index": 7,
-          "picture": "/src/assets/about/css-3.png",
-          "name": "css",
-        },
-        {
-          "index": 8,
-          "picture": "/src/assets/about/node-js.png",
-          "name": "node",
-        },
-        {
-          "index": 9,
-          "picture": "/src/assets/about/api.png",
-          "name": "rest api",
-        },
-        {
-          "index": 10,
-          "picture": "/src/assets/about/jwt.png",
-          "name": "jwt token",
-        },
-      ]
+  const {data:datas=[], isLoading, error} = useQuery({
+    queryKey:["abouts"],
+    queryFn:async()=>{
+      const res = await fetch("http://localhost:5000/abouts")
+      const data = await res.json()
+      return data
+    }
+  })
     return (
         <div id='about' className='my-12 py-10'>
             <div className='text-center mb-4 '>
@@ -72,7 +24,7 @@ const About = () => {
             <p className='lg:mx-40 italic md:mx-20 mx-6 text-center my-10'>Hello! Abdul Al Noman is a self-motivated and passionate web developer. I have been learning web development for 1.5 years. I learned JavaScript, React js, Node js, MongoDB and Express js during this time. I am constantly upgrading my skills to make an impact in web development</p>
             <div className='md:col-span-2 col-span-3 sm:w-11/12 w-7/12 mx-auto'>
                 <motion.div whileInView={{x:0, opacity:1}} initial={{x:300,opacity:0}} viewport={{once:true}} className='grid sm:grid-cols-3 lg:grid-cols-6 md:grid-cols-4 gap-x-6 gap-y-6'>
-                    {datas.map((data)=>(
+                    {datas?.map((data)=>(
                         <div key={data?.index} className='rounded-xl p-6 text-center card-gradient'>
                             <img className='w-full h-32' src={data?.picture} alt="picture" />
                             <h3 className='mt-2 text-lg'>{data?.name}</h3>

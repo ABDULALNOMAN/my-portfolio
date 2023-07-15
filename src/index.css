@@ -36,9 +36,13 @@
     filter: blur(400px);
   }
   .btn-primary{
-    background: linear-gradient(to right, #1f5864, #1a5d6e, #166278, #146783, #166b8e, #13719b, #1378a8, #177eb5, #0e88c7, #0492d9, #009bec, #00a5ff);
-    border: none;
+    background-image: linear-gradient(to right top, #0086b5, #0084cb, #0080e1, #0079f3, #006eff);   
+     border:none;
+   }
+  .btn-secondary{
+    background-image: linear-gradient(to right, #5b0074, #4b1f7d, #382e84, #223987, #004187);    border: none;
   }
+    
 
  @keyframes handhello {
   to{
@@ -56,3 +60,4 @@
   animation-direction: alternate;
   animation-iteration-count: infinite;
  }
+

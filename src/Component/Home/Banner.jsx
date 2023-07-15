@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import myImg from '../../assets/banner/magicpattern-blob-1688642526922-removebg-preview (2).png'
 import waving from '../../assets/banner/Waving-hand.png'
 import sideblob from '../../assets/banner/magicpattern-blob-1688810636775.png'
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import { FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 
@@ -39,22 +39,22 @@ const Banner = () => {
                                     className='md:text-5xl sm:text-4xl text-3xl font-bold py-2 type_animation text-transparent'
                                 />
                             <p className='text-normal capitalize italic'>From Chittagong, Bangladesh. I am a front end developer as well as a learner. I am constantly updating my skills. I love talking to you about it. I have a strong passion for learning and implementing web technologies and standards.</p>
-                            <div className='flex justify-start items-center gap-x-4 py-4'>
+                            <div className='flex justify-start items-center md:gap-x-4 gap-x-7 py-4'>
                                 <a href="https://www.facebook.com/profile.php?id=100022732852808" target='_blank'><FaFacebook className='text-blue-700 text-3xl hand-hello delay-1000'></FaFacebook></a>
                                 <a href="https://www.linkedin.com/in/abdul-al-noman-187751257/" target='_blank'><FaLinkedin className='text-blue-700 text-3xl hand-hello delay-75'></FaLinkedin></a>
                                 <a href="https://github.com/ABDULALNOMAN?tab=repositories" target='_blank'><BsGithub className='text-white text-3xl hand-hello delay-1000'></BsGithub></a>
                             </div>
                             <div className=''>
                                 <a href={myResume} download={'abdul al noman.pdf'}>
-                                    <button className='btn bg-transparent no-animation hover:bg-transparent'>resume</button>
+                                    <button className='btn bg-transparent no-animation hover:bg-transparent btn-primary'>resume</button>
                                 </a>
                                 <a target={'_blank'} className='ml-2' href="https://www.linkedin.com/in/abdul-al-noman-187751257/">
-                                    <button className='btn btn-warning'>Hire me</button>
+                                    <button className='btn btn-secondary'>Hire me</button>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-5/12 w-0  hidden h-full relative lg:flex justify-center items-center z-0  hand-hello'>
+                    <motion.div whileInView={{opacity:1, x:0}} animate={{opacity:0, x:200}} transition={{duration:easeIn}} className='lg:w-5/12 w-0  hidden h-full relative lg:flex justify-center items-center z-0  hand-hello'>
                         <div className='rounded-full border-4 border-cyan-700  absolute top-10 w-24 h-24 left-6 '>
                             <div className='flex justify-center flex-col items-center w-full h-full'>
                                 <h6 className='text-lg'>2<sup>+</sup> <sub>years</sub></h6>
@@ -66,7 +66,7 @@ const Banner = () => {
                         <div className="absolute w-[70%] h-[70%] blue__gradient" />
                         <div className="absolute w-[90%] h-[90%] hero-gradient" />
                         <img className='absolute w-28 right-5 bottom-14 rotate-45 ' src={sideblob} alt="" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

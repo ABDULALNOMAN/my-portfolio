@@ -8,9 +8,9 @@ import ContactParents from './ContactParents';
 import Blog from './Blog';
 
 const Home = () => {
-    const { change } = useContext(callContext)
+    const { setChange } = useContext(callContext)
     return (
-        <div>
+        <div onClick={()=>setChange(false)}>
             <Banner></Banner>
             <About></About>
             <Card></Card> 
