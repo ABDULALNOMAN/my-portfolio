@@ -55,21 +55,22 @@ const Card = () => {
             >
                 <div className='py-16'>
                     {isLoading && <p>loading...</p>}
-                    {items?.length&& items?.map((item)=>(
+                    {items?.length ? items?.map((item)=>(
                         <SwiperSlide key={item._id}>
-                            <div className='card-gradient md:h-[400px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>
+                            <div className='card-gradient md:h-[380px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>
                                 <div className=''>
                                     <img className='w-full h-full rounded-lg' src={item?.img} alt="" />
                                 </div>
                                 <h3 className='font-bold text-xl'>{item?.name}</h3>
                                 <p className='text-sm'>{item?.description}</p>
                                 <div className='flex items-center justify-start gap-x-4'>
-                                    <button><a className='btn btn-primary btn-sm' href="" target='_blank'>live</a></button>
+                                    <button><a className='btn btn-primary btn-sm' href={item?.site} target='_blank'>site</a></button>
                                     <button><Link className='btn btn-info btn-sm' to={`/products/${item?._id}`}>click</Link></button>
                                 </div>
                             </div>
                         </SwiperSlide>
-                    )) }
+                    )):""}
+                    {error && "error"}
                 </div>
             </Swiper>
         </div>

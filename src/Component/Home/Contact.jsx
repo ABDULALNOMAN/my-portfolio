@@ -1,4 +1,6 @@
 import emailjs from '@emailjs/browser';
+import { accent, success } from 'daisyui/src/colors';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
@@ -14,13 +16,12 @@ const Contact = () => {
                 event.target.reset()
             }
         }, (error) => {
-            console.log(error.text);
             error.text && toast.error("error")
         });
   };
     return (
         <div id='contact' className='w-full mx-auto h-full'>
-            <form onSubmit={submitEmail} className='rounded-2xl h-full border-double p-5 card-gradient md:mx-0  text-white flex flex-col justify-around items-start' action="">
+            <form onSubmit={(event)=>submitEmail(event)} className='rounded-2xl h-full border-double p-5 card-gradient md:mx-0  text-white flex flex-col justify-around items-start' action="">
                 <div className='grid grid-cols-2 gap-4 mb-3 w-full'>
                     <div>
                         <label htmlFor="Name">Name</label>
@@ -40,7 +41,7 @@ const Contact = () => {
                     <input type="text" placeholder='subject' className='input input-bordered w-full text-black' name="subject" />
                 </div>
                 <textarea name='message' className="textarea textarea-bordered w-full h-full text-black" data-msg="please write something for me" required placeholder="description"></textarea>
-                <button className='btn btn-info mt-3' type="submit">send message</button>
+                <button className={` btn mt-3 btn-info`} type="submit">send message</button>
             </form>
         </div>
     );

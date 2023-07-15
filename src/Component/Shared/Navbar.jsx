@@ -8,8 +8,8 @@ import logo from '../../assets/logo/abdul-al-noman-low-resolution-logo-color-on-
 const Navbar = () => {
     const {setChange , change} = useContext(callContext)
     return (
-        <div className='z-40 sticky top-0 '>
-            <div className="bg-slate-800 navbar text-white lg:px-12 px-4">
+        <div className='z-40 sticky top-0'>
+            <div className=" bg-slate-800 navbar text-white lg:px-12 px-4">
                 <div className='navbar-start'>
                     <Link to={'/'} className=""><img className='w-44 py-1' src={logo} alt="logo" /></Link> 
                 </div> 
@@ -21,8 +21,8 @@ const Navbar = () => {
                         <ul className="menu menu-horizontal px-1">
                             <li><Link to={"/"}>home</Link></li>
                             <li><a href='#banner'>banner</a></li>
-                            <li><Link to="/">about</Link></li>
-                            <li><a href='#footer'>project</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href='#project'>project</a></li>
                             <li><a href='#contact'>contact</a></li>
                         </ul>
                     </div>

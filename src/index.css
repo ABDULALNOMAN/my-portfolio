@@ -39,31 +39,6 @@
     background: linear-gradient(to right, #1f5864, #1a5d6e, #166278, #146783, #166b8e, #13719b, #1378a8, #177eb5, #0e88c7, #0492d9, #009bec, #00a5ff);
     border: none;
   }
- @keyframes primary {
-   20%{
-      width: full;
-   }
-   40%{
-    width: 130px;
-   }
-   60%{
-    width: 150px;
-   }
-   80%{
-    width: 170px;
-   }
-   100%{
-    width: 180px;
-   }
- }
- .primary-animation{
-  animation: primary;
-  animation-duration: 2s;
-  animation-delay: 2ms;
-  animation-direction:alternate ;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
- }
 
  @keyframes handhello {
   to{

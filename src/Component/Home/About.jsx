@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 const About = () => {
@@ -70,14 +71,14 @@ const About = () => {
             </div>
             <p className='lg:mx-40 italic md:mx-20 mx-6 text-center my-10'>Hello! Abdul Al Noman is a self-motivated and passionate web developer. I have been learning web development for 1.5 years. I learned JavaScript, React js, Node js, MongoDB and Express js during this time. I am constantly upgrading my skills to make an impact in web development</p>
             <div className='md:col-span-2 col-span-3 sm:w-11/12 w-7/12 mx-auto'>
-                <div className='grid sm:grid-cols-3 lg:grid-cols-6 md:grid-cols-4 gap-x-6 gap-y-6'>
+                <motion.div whileInView={{x:0, opacity:1}} initial={{x:300,opacity:0}} viewport={{once:true}} className='grid sm:grid-cols-3 lg:grid-cols-6 md:grid-cols-4 gap-x-6 gap-y-6'>
                     {datas.map((data)=>(
                         <div key={data?.index} className='rounded-xl p-6 text-center card-gradient'>
                             <img className='w-full h-32' src={data?.picture} alt="picture" />
                             <h3 className='mt-2 text-lg'>{data?.name}</h3>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

@@ -46,10 +46,10 @@ const Banner = () => {
                             </div>
                             <div className=''>
                                 <a href={myResume} download={'abdul al noman.pdf'}>
-                                    <button className='btn bg-transparent no-animation primary-animation'>resume</button>
+                                    <button className='btn bg-transparent no-animation hover:bg-transparent'>resume</button>
                                 </a>
                                 <a target={'_blank'} className='ml-2' href="https://www.linkedin.com/in/abdul-al-noman-187751257/">
-                                    <button className='btn btn-warning hover:w-40'>Hire me</button>
+                                    <button className='btn btn-warning'>Hire me</button>
                                 </a>
                             </div>
                         </div>
