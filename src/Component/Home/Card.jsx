@@ -21,7 +21,7 @@ const Card = () => {
     const {isLoading, error, data:items=[]} = useQuery({
         queryKey:["projectdata"],
         queryFn:async()=>{
-            const res = await fetch("http://localhost:5000/projectdata")
+            const res = await fetch("https://my-protfolio-server-eight.vercel.app/projectdata")
             const data = res.json()
             return data
         }

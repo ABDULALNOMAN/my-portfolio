@@ -8,7 +8,7 @@ const About = () => {
   const {data:datas=[], isLoading, error} = useQuery({
     queryKey:["abouts"],
     queryFn:async()=>{
-      const res = await fetch("http://localhost:5000/abouts")
+      const res = await fetch("https://my-protfolio-server-eight.vercel.app/abouts")
       const data = await res.json()
       return data
     }
