@@ -1,11 +1,8 @@
 import emailjs from '@emailjs/browser';
-import { accent, success } from 'daisyui/src/colors';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 const Contact = () => {
-    localStorage.theme ="light"
     const serviceId = import.meta.env.VITE_SERVICE_ID
     const templateId = import.meta.env.VITE_TEMPLATE_ID
     const publicId = import.meta.env.VITE_PUBLIC_KEY
