@@ -5,6 +5,8 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import {useQuery} from '@tanstack/react-query'
+import Loading from '../Other/Loading';
+import Error from '../Other/Error';
 
 const Card = () => {
     const [widthNum , setWidthNum] = useState(1)
@@ -16,7 +18,7 @@ const Card = () => {
     }
     setInterval(widthFunc, 1000)
 
-    const {isLoading,error, data:items=[]} = useQuery({
+    const {isLoading, error, data:items=[]} = useQuery({
         queryKey:["projectdata"],
         queryFn:async()=>{
             const res = await fetch("http://localhost:5000/projectdata")
@@ -54,7 +56,7 @@ const Card = () => {
                 modules={[Pagination]}
             >
                 <div className='py-16'>
-                    {isLoading && <p>loading...</p>}
+                    {isLoading && <Loading></Loading>}
                     {items?.length ? items?.map((item)=>(
                         <SwiperSlide key={item._id}>
                             <div className='card-gradient md:h-[380px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>
@@ -70,7 +72,7 @@ const Card = () => {
                             </div>
                         </SwiperSlide>
                     )):""}
-                    {error && "error"}
+                    {error && <Error></Error>}
                 </div>
             </Swiper>
         </div>

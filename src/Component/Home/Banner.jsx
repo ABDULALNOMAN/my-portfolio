@@ -54,7 +54,7 @@ const Banner = () => {
                             </div>
                         </div>
                     </div>
-                    <motion.div whileInView={{opacity:1, x:0}} animate={{opacity:0, x:200}} transition={{duration:easeIn}} className='lg:w-5/12 w-0  hidden h-full relative lg:flex justify-center items-center z-0  hand-hello'>
+                    <div className='lg:w-5/12 w-0  hidden h-full relative lg:flex justify-center items-center z-0  hand-hello'>
                         <div className='rounded-full border-4 border-cyan-700  absolute top-10 w-24 h-24 left-6 '>
                             <div className='flex justify-center flex-col items-center w-full h-full'>
                                 <h6 className='text-lg'>2<sup>+</sup> <sub>years</sub></h6>
@@ -66,7 +66,7 @@ const Banner = () => {
                         <div className="absolute w-[70%] h-[70%] blue__gradient" />
                         <div className="absolute w-[90%] h-[90%] hero-gradient" />
                         <img className='absolute w-28 right-5 bottom-14 rotate-45 ' src={sideblob} alt="" />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
