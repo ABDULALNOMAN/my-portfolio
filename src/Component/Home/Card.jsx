@@ -55,16 +55,15 @@ const Card = () => {
                 }}
                 modules={[Pagination]}
             >
-                <div className='py-16'>
+                <div className='py-16 border-2 border-red-500'>
                     {isLoading && <Loading></Loading>}
                     {items?.length ? items?.map((item)=>(
                         <SwiperSlide key={item._id}>
-                            <div className='card-gradient md:h-[380px] flex flex-col justify-between items-start p-3 rounded-tl-3xl rounded-br-3xl'>
+                            <div className=' h-full flex flex-col justify-start items-start p-3 rounded-tl-3xl rounded-br-3xl gap-y-3 shadow-md shadow-gray-600'>
                                 <div className=''>
                                     <img className='w-full h-full rounded-lg' src={item?.img} alt="" />
                                 </div>
                                 <h3 className='font-bold text-xl'>{item?.name}</h3>
-                                <p className='text-sm'>{item?.description}</p>
                                 <div className='flex items-center justify-start gap-x-4'>
                                     <button><a className='btn btn-primary btn-sm' href={item?.site} target='_blank'>site</a></button>
                                     <button><Link className='btn btn-sm btn-secondary' to={`/products/${item?._id}`}>click</Link></button>

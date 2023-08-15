@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import myResume from '../../assets/myResume.pdf';
+import myResume from '../../assets/abdul al noman.pdf';
 import { TypeAnimation } from 'react-type-animation';
 import myImg from '../../assets/banner/magicpattern-blob-1688642526922-removebg-preview (2).png'
 import waving from '../../assets/banner/Waving-hand.png'
